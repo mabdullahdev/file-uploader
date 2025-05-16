@@ -285,7 +285,7 @@ export default function FileUploader() {
         </Banner>
       )}
       
-      <Box paddingBlockEnd="4">
+      <Box paddingBlockEnd="4" style={{ marginBottom: '20px' }}>
         <Card>
           <DropZone
             accept="image/*, application/pdf, .doc, .docx, .xls, .xlsx, .ppt, .pptx, .txt"
@@ -317,13 +317,13 @@ export default function FileUploader() {
       </Box>
       
       {selectedFiles.length > 0 && (
-        <Box paddingBlockEnd="4">
+        <Box paddingBlockEnd="4" paddingBlockStart="4">
           <Card>
             <Box padding="4">
               <Text variant="headingMd" as="h2">Selected Files</Text>
               <Text variant="bodySm" as="p" color="subdued">Review your selected files before uploading</Text>
               
-              <Box paddingBlockStart="4">
+              <Box paddingBlockStart="4" style={{ maxHeight: '500px', overflowY: 'auto' }}>
                 <BlockStack gap="2">
                   {selectedFiles.map((file) => (
                     <Card key={file.id}>
@@ -375,7 +375,7 @@ export default function FileUploader() {
       
       {files.length > 0 && (
         <Card>
-          <Box padding="4">
+          <Box padding="4" style={{ maxHeight: '500px', overflowY: 'auto' }}>
             <Text variant="headingMd" as="h2">Uploads</Text>
             <BlockStack gap="2">
               {files.map((file) => (
